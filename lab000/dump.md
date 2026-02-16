@@ -23,3 +23,13 @@
 **`ip netns exec <namespace> ip link set lo up`:** Sets loopback
 
 **`ip netns exec <namespace> <command>`:** Allows running given `<command>` on an arbitrary namespace
+
+**`ip netns exec <namespace> ip neigh flush all`:** Resets cache and resets ARP table
+
+**`ip netns exec <namespace> ip route flush table main`:** Resets routing table
+
+**`ip netns exec <namespace> ip addr flush dev <veth>`:** Resets IP addresses but keeps bridge, veths and peers
+
+**`ip netns list`:** Lists namespaces
+**`ip link show type bridge`:** Lists bridges
+**`ip link show type veth`:** Lists veths
